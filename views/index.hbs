@@ -1,0 +1,45 @@
+<p>Click here to find your latitude and longitude coordinates</p>
+<button class="btn btn-dark" onclick="getLocation()">Click</button>
+<br><br>
+
+<div class="container">
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</div>
+
+<div class="w-50 alert alert-info" role="alert">
+    <p>Just copy and past your latitude and longitude on corresponding input field</p>
+</div>
+
+<form action="/" method="post" autocomplete="off">
+    <label for="">Latitude*</label>
+    <input class="form-control w-50" type="text" id="demo1" name="latitude" required>
+    <label for="">Longitude*</label>
+    <input class="form-control w-50" type="text" id="demo2" name="longitude" required><br>
+    <input class="w-50 btn btn-success" type="submit" value="Submit">
+</form>
+
+<a class="mt-3 btn btn-dark" href="/view">Dev View</a>
+
+<script>
+
+    var lat = document.getElementById("demo1");
+    var lon = document.getElementById("demo2");
+    
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        lat.innerHTML = position.coords.latitude;
+        lon.innerHTML = position.coords.longitude;
+    }
+
+
+
+</script>
