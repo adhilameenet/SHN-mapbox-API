@@ -10,7 +10,6 @@ module.exports.connect = () => {
         if (err) {
             console.log(err);
         } else {
-            console.log('database connected');
             db = data.db(dbname)
         }
     })

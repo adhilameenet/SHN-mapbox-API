@@ -1,8 +1,7 @@
 <section>
-
-    <div id='map' style='width: 80vw; height: 80vh;'> </div>
-
-    <a class="mt-3 btn btn-danger" href="/">Home</a>
+    <div class="container map-box">
+        <div id='map' style='width: 80vw; height: 80vh;'></div>
+    </div>
 
 </section>
 <script>
@@ -12,13 +11,13 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [-79.4512, 43.6568],
-        zoom : 0
+        zoom: 0
     });
 
 
-    {{#each userlocation}}
-    const marker1 = new mapboxgl.Marker({color : 'red'})
-        .setLngLat([{{this.longitude}}, {{this.latitude}}])
+    {{#each userlocation }}
+    const marker1 = new mapboxgl.Marker({ color: 'red' })
+        .setLngLat([{{ this.longitude }},{{ this.latitude }}])
         .addTo(map);
     {{/each}}
 </script>

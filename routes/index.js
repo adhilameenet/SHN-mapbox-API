@@ -12,11 +12,13 @@ router.post('/' , (req,res) => {
   console.log(req.body);
   db.get().collection('userlocation').insertOne(req.body).then((response) => {
     console.log('data submitted');
+    res.redirect('/')
   })
 })
 
 router.get('/view' , async(req,res) => {
   var userlocation = await db.get().collection('userlocation').find().toArray()
+  console.log(userlocation);
   if(userlocation) {
     res.render('map' , {userlocation});
   }
