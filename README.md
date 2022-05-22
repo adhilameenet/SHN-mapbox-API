@@ -19,11 +19,18 @@ Mandtracker is a simple Webapp to find the location of people using latitude and
 
 <br>
 
-<p> User View </p>
+### User View
+
+<hr>
 <img src="./snapshots/user.png"
      alt="user" >
+<br>
+     
+### Admin View
 
- <p> Admin View </p>    
+<hr>
+
+<br>
 <img src="./snapshots/admin.png"
      alt="user" >
 
@@ -76,7 +83,7 @@ And navigate to `http://127.0.0.1:3000/`
 <br>
 
 ## Contributors
-- [Adhil Ameen]("https://github.com/adhilameenet")
-- [Hadi Bin Noor]("https://github.com/hadui")
-- [Faheem]("https://github.com/FaheemMundodan")
+- [Adhil Ameen](https://github.com/adhilameenet)
+- [Hadi Bin Noor](https://github.com/hadui)
+- [Faheem](https://github.com/FaheemMundodan)
 
