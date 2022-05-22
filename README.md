@@ -5,6 +5,9 @@
 
 Mandtracker is a simple Webapp to find the location of people using latitude and longitude coordinates  using mapbox API.
 
+#### Explore the site »
+
+  - [Go to Site](https://mandtracker.herokuapp.com/)
 
 
 <br>
