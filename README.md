@@ -1,5 +1,5 @@
 
-# Mandtracker
+# Mandtracker 🌍
 
 Mandtracker is a simple Webapp to find the location of people using latitude and longitude coordinates.
 
@@ -7,7 +7,7 @@ Mandtracker is a simple Webapp to find the location of people using latitude and
 
 <p>Hosted in Heroku </p>
 
-- [mandtracker](https://mandtracker.herokuapp.com/)
+- [Mandtracker](https://mandtracker.herokuapp.com/)
 
 
 ## Tech Used
@@ -50,7 +50,15 @@ $ https://github.com/adhilameenet/SHN-mapbox-API
 $ cd SHN-mapbox-API
 
 ```
-  
+
+Create a . env file in the project directory and set the mongodb connection string
+
+```sh
+
+DB_NAME =
+DB_CONNECTION_STRING = 
+
+```  
 
 Then install the dependencies:
 
@@ -62,13 +70,6 @@ npm install
 
 ```
 
-Create a . env file in the project directory and set the mongodb connection string
-
-```sh
-
-uri = ""
-
-```
 
 Then run the server using
 

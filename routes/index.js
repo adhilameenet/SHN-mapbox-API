@@ -17,8 +17,7 @@ router.post('/' , (req,res) => {
 })
 
 router.get('/view' , async(req,res) => {
-  var userlocation = await db.get().collection('userlocation').find().toArray()
-  console.log(userlocation);
+  var userlocation = await db.get().collection('userlocation').find().sort({_id : -1}).limit(1).toArray()
   if(userlocation) {
     res.render('map' , {userlocation});
   }

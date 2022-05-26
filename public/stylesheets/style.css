@@ -1,11 +1,26 @@
 
-body {
-  padding: 20px;
+/* Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.map-box {
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#map {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.result {
+  text-align: center;
+  color: red;
+}
+.alert-content {
+  font-size: 14px;
+  text-align: center;
 }

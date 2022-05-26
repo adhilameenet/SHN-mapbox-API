@@ -1,11 +1,10 @@
 <section>
-    <div class="container map-box">
-        <div id='map' style='width: 80vw; height: 80vh;'></div>
+    <div>
+        <div id='map'></div>
     </div>
-
 </section>
-<script>
 
+<script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYWRoaWxhbWVlbmV0IiwiYSI6ImNsM2Jwdmc0eTAwMWgzam52d2oyYzJoZWcifQ.6XDnpBqFWF71nPwOPzy4RQ';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -14,10 +13,39 @@
         zoom: 0
     });
 
+    // MapboxExportControl 
+    map.addControl(new watergis.MapboxExportControl({
+        PageSize: watergis.Size.A4,
+        PageOrientation: watergis.PageOrientation.Landscape,
+        Format: watergis.Format.PNG,
+        DPI: watergis.DPI[400],
+        Crosshair: true,
+        PrintableArea: true,
+    }), 'top-right');
 
-    {{#each userlocation }}
+    // FullScreenControl
+    map.addControl(new mapboxgl.FullscreenControl());
+
+    // GeolocateControl
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+        })
+    );
+
+    // NavigationControl
+    map.addControl(new mapboxgl.NavigationControl());
+
+    // Custom Marker
+
+    {{#each userlocation}}
     const marker1 = new mapboxgl.Marker({ color: 'red' })
-        .setLngLat([{{ this.longitude }},{{ this.latitude }}])
+        .setLngLat([{{this.longitude}}, {{this.latitude}}])
         .addTo(map);
     {{/each}}
+
 </script>
